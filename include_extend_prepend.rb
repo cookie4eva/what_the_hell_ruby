@@ -1,5 +1,3 @@
-require 'pry'
-
 module Movement
   def move
     puts 'I am moving my leg'
@@ -111,3 +109,4 @@ puts "singleton_class.ancestors #{Breath.singleton_class.ancestors}"
 # [#<Class:Breath>, Movement, Module, Object, PP::ObjectMixin, Kernel, BasicObject]
 puts "singleton_methods #{Breath.singleton_methods}"
 # [:breath_in, :move]
+#

@@ -28,5 +28,3 @@ f = Friend.new
 puts "Am I me? #{f.i_am == f}" #true
 puts "What am I? #{Friend.what_am_i == Friend}" #true
 puts "Best friend? #{f.best_friend == f}" #true
-
-

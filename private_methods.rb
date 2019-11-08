@@ -1,5 +1,3 @@
-require 'pry'
-
 #Example 1
 class Body
 
@@ -83,7 +81,6 @@ rescue NoMethodError => msg
   puts "Can't access languages: #{msg}"
   # private method `languages' called for ProgrammingLanguage:Class
 end
-
 
 # Example 3
 class ComputerOS

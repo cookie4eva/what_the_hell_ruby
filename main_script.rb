@@ -1,6 +1,5 @@
-require 'pry'
 
-puts This is who I am #{self}" #main
+puts "This is who I am #{self}" #main
 puts "This is my class type #{self.class}" #Cbject
 puts "This is my singleton class #{self.singleton_class}" # #<Class:#<Object:0x007fec0108dc80>>
 
@@ -18,5 +17,3 @@ end
 
 puts "This are my self methods #{self.private_methods.include?(:what_will_happen)}" #false
 puts "This are my self singleton methods #{self.singleton_methods.include?(:what_will_happen)}" #true
-
-
