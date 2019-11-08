@@ -41,9 +41,4 @@ rescue NoMethodError => e
 end
 
 puts MyClass.new::class_method # This is a class method
-
-
 # https://github.com/ruby/ruby/blob/master/variable.c#L260
-
-
-

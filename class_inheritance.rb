@@ -1,5 +1,4 @@
 class One
-
   def one
     'one'
   end

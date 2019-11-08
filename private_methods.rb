@@ -1,6 +1,5 @@
 #Example 1
 class Body
-
   def scratch_forehead
     "I'm gonna scratch forehead"
   end
@@ -16,50 +15,21 @@ class Body
   end
 end
 
-class Everybody
-  def high_five
-    "Let's high five"
-  end
-
-  def self.names
-    ['Hila', 'Rotem', 'Leanne']
-  end
-end
-
-puts "Can I get a list of every ones names? #{Everybody.methods.include?(:names)}" #true
-puts "Can everyone high five together? #{Everybody.methods.include?(:high_five)}" # false
-
-e = Everybody.new
-
-puts "Can I know the names of everyone? #{e.methods.include?(:names)}" # false
-puts "Can I high five with someone? #{e.methods.include?(:high_five)}" #true
-
 begin
   Body.pick_nose
 rescue NoMethodError => e
-  puts "Can't pick your nose in public: #{e.message}" # undefined method `pick_nose' for Body:Class
+  puts e.message # undefined method `pick_nose' for Body:Class
 end
 
-puts "Picking your ears is controversial but ok: #{Body.pick_ears}" # I'm gonna pick my ears
+puts Body.pick_ears # I'm gonna pick my ears
 
 body = Body.new
 
 begin
   body.pick_nose
 rescue NoMethodError => e
-  puts "you shouldn't pick you nose even when your alone: #{e.message}"
-  # private method `pick_nose' called for #<Body:0x007fbed1152c18>
+  puts e.message # private method `pick_nose' called for #<Body:0x007fbed1152c18>
 end
-
-
-begin
-  body.pick_ears
-rescue NoMethodError => e
-  puts "Your alone, but its not that exciting without a crowd : #{e.message}"
-  # undefined method `pick_ears' for #<Body:0x007fbed1152c18>
-end
-
-
 
 #Example 2
 class ProgrammingLanguage
@@ -74,12 +44,12 @@ class ProgrammingLanguage
   private_class_method :languages
 end
 
-puts "My first programming language #{ProgrammingLanguage.first} " # "C"
+puts ProgrammingLanguage.first # 'C'
+
 begin
   ProgrammingLanguage.languages.count
 rescue NoMethodError => msg
-  puts "Can't access languages: #{msg}"
-  # private method `languages' called for ProgrammingLanguage:Class
+  puts msg # private method `languages' called for ProgrammingLanguage:Class
 end
 
 # Example 3
@@ -97,12 +67,12 @@ class ComputerOS
   end
 end
 
-puts "My first programming language #{ComputerOS.first} " # "Windows"
+puts ComputerOS.first # "Windows"
+
 begin
-  ComputerOS.languages.count
+  ComputerOS.all_os.count
 rescue NoMethodError => msg
-  puts "Can't access languages: #{msg}"
-  # undefined method `languages' for ComputerOS:Class
+  puts msg # undefined method `all_os' for ComputerOS:Class
 end
 
 #example 4
