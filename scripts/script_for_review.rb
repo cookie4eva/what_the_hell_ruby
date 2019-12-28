@@ -8,7 +8,4 @@ end
 
 manipulate_array(arr)
 
-puts arr.join(",")
-
-# output
-# 1,2,3,4,5
+puts arr.join(",") # 1,2,3,4,5
