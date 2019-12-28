@@ -24,11 +24,11 @@ module StaticLike
     'some util'
   end
 end
-
+#
 # module Run < Movement
 #
 # end
-# Fails - unexpected
+# syntax error, unexpected '<'
 
 puts Movement.ancestors.inspect # [Movement]
 puts Movement::Walk.ancestors.inspect # [Movement::Walk]
