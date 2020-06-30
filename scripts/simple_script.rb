@@ -1,4 +1,3 @@
-
 puts "Hello Everyone"
 
 def simple_method

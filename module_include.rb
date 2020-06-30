@@ -4,17 +4,13 @@ module Movement
   def move
     'I am moving my leg'
   end
-
-  def self.move_all
-    'I am moving all my legs'
-  end
 end
 
 class DogInclude
   include Movement
 
   def bark
-    ' woof woof'
+    'woof woof'
   end
 
   def self.howl
@@ -22,10 +18,8 @@ class DogInclude
   end
 end
 
-puts DogInclude.ancestors.inspect # [DogInclude, Movement, Object, PP::ObjectMixin, Kernel, BasicObject]
+puts DogInclude.ancestors.inspect # [DogInclude, Movement, Object, Kernel, BasicObject]
 puts DogInclude.new.methods[0..1] # [:bark, :move]
-
-puts DogInclude.singleton_methods # [:howl]
 
 #Example 2
 
@@ -56,7 +50,7 @@ class JumpingDog
   include Jump
 end
 
-puts JumpingDog.ancestors.inspect # [DogDoubleIncluded, Jump, Movement, Object, Kernel, BasicObject]
+puts JumpingDog.ancestors.inspect # [JumpingDog, Jump, Movement, Object, Kernel, BasicObject]
 puts JumpingDog.new.move # now jumping
 
 class MovingDog
